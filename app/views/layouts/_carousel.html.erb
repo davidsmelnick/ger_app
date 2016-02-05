@@ -1,0 +1,47 @@
+    <!-- Carousel
+    ================================================== -->
+    <span class="anchor" id="top"></span>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
+      <div id="thelinks" class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= image_tag("slider-lg__bg.png", alt: "First Slide") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <%= image_tag("careTeam-logo.png", alt: "careTEAM-logo") %>
+              <h2>A mission critical and comprehensive communication platform that is easy to deploy and intuitive to use</h2>
+              <p><a class="btn btn-lg btn-primary" href="#CareTEAM" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag("slider-lg__bg.png", alt: "First Slide") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <%= image_tag("careLINK-logo.png", alt: "careLINK-logo") %>
+              <h2>Simplify your practice with our comprehensive answering service replacement and integrated communication suite</h2>
+              <p><a class="btn btn-lg btn-primary" href="#CareLINK" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+    <script>
+      $("#thelinks a").click(function(){
+        var linkID = $(this).attr("href");
+        $("body").animate({scrollTop: $(linkID).offset().top}, "slow");
+        return false;
+      });
+    </script>
