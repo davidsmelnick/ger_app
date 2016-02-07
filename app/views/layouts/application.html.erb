@@ -17,5 +17,11 @@
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
   </head>
+  <% provide(:title, "Home") %>
+  <body data-spy="scroll" data-target=".navbar">
+    <%= render 'layouts/header' %>
+  </body>
+</div>
   <%= yield %>
+  <%= render 'layouts/footer' %>
 </html>
